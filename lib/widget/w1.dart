@@ -8,7 +8,7 @@ class widget1 extends StatefulWidget {
   final Function()? onPressedadd;
   final Function()? onPressedremove;
 
-  final int Function(counterState) selector;
+  final int Function(counter_state) selector;
   final Widget Function(BuildContext, dynamic) builder;
   widget1(this.selector, this.builder, this.onPressedadd, this.onPressedremove,
       {super.key});
@@ -25,7 +25,7 @@ class _widget1State extends State<widget1> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(onPressed: widget.onPressedadd, icon: Icon(Icons.add)),
-        BlocSelector<counterCubit, counterState, int>(
+        BlocSelector<counter_cubit, counter_state, int>(
             selector: widget.selector, builder: widget.builder),
         IconButton(onPressed: widget.onPressedremove, icon: Icon(Icons.remove)),
       ],
